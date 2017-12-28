@@ -1,0 +1,31 @@
+---
+title: 
+author: Yue Jiang
+date: '2017-12-27'
+slug: cv
+categories: []
+tags: []
+---
+
+# Education
+
+Duke University, Durham, NC
+
+- PhD, Genetics and Genomics, 2009-2015
+- MS, Statistics, 2013-2015
+
+Peking University, Beijing, China
+
+- BS, School of Life Sciences, 2004-2008
+
+# Experience
+
+Juno Therapeutics, Seattle, WA
+
+- Data Scientist, 2016-present
+
+Verily Life Sciences, Mountain View, CA
+
+- Decision Support Engineering Analyst Intern, summer 2015
+
+

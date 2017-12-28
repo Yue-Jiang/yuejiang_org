@@ -1,0 +1,39 @@
+---
+title: Publications
+author: Yue Jiang
+date: '2017-12-27'
+slug: publications
+categories: []
+tags: []
+---
+
+# Journals
+
+[Grigaityte K, Carter JA, Goldfless SJ, Jeffery EW, Hause RJ, **Jiang Y**, Koppstein D, Briggs AW, Church GM, Vigneault F, Atwal GS. **"Single-cell sequencing reveals $\alpha\beta$ chain pairing shapes the T cell repertoire." _bioRxiv_, 2017.**](https://www.biorxiv.org/content/early/2017/11/02/213462)
+
+[Ibarra-Soria X, Nakahara TS, Lilue J, **Jiang Y**, Trimmer C, Souza MA, Netto PH, Ikegami K, Murphy NR, Kusma M, Kirton A, Saraiva LR, Keane TM, Matsunami H, Mainland JD, Papes F, Logan DW. **"Variation in olfactory neuron repertoires is genetically controlled and environmentally modulated." _eLife_, 6: e21476, 2017.**](https://elifesciences.org/content/6/e21476)
+
+[**Jiang Y**, Gong N, Hu X, Ni J, Pasi R, Matsunami H. **"Molecular profiling of activated olfactory neurons identifies odorant receptors for odors _in vivo_." _Nature Neuroscience_, 18: 1446-1454, 2015.**](http://www.nature.com/neuro/journal/vaop/ncurrent/full/nn.4104.html)
+
+[**Jiang Y**\*, Li Y\*, Tian H, Ma M, Matsunami H. **"Muscarinic acetylcholine receptor M3 modulates odorant receptor activity via inhibition of $\beta$-arrestin-2 recruitment." _Nature Communications_, 6: 6448, 2015.** \*equal contributions](http://www.nature.com/ncomms/2015/150324/ncomms7448/full/ncomms7448.html)
+
+        
+[**Jiang Y** and Matsunami H. **"Mammalian odorant receptors: functional evolution and variation." _Current Opinion in Neurobiology_, 34: 54-60, 2015.**](http://www.sciencedirect.com/science/article/pii/S0959438815000239)
+          
+[**Jiang Y**, Dey S, Matsunami H. **"Calreticulin: roles in cell-surface protein expression." _Membranes_, 4: 630-641, 2014.**](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4194052/) 
+
+[**Jiang Y**, Gong N, Matsunami H. **"Astringency: a more stringent definition." _Chemical Senses_, 39: 467-469, 2014.**](http://chemse.oxfordjournals.org/content/39/6/467.full?sid=fda9b134-4b6b-4aa5-80fc-427e8a8a2d82)
+       
+[Chen B, **Jiang Y**, Zeng S, Yan J, Li X, Zhang Y, Zou W, Wang X. **"Endocytic sorting and recycling require membrane phosphatidylserine asymmetry maintained by TAT-1/CHAT-1." _Plos Genetics_, 6: e1001235, 2010.**](http://www.plosgenetics.org/article/info%3Adoi%2F10.1371%2Fjournal.pgen.1001235)
+
+# Conference proceedings
+
+Larson RP, RL, Devries T, **Jiang Y**, Hause RJ, Getto R, Christin B, Yee NK, Bowen M, Weber C, Li D, Albertson T, Sutherland CL, Ramsborg CG. **"Defined cell composition and precise control over JCAR017 dose enables identification of relationships between chimeric antigen receptor T cell product attributes, pharmacokinetics, and clinical endpoints in non-Hodgkin lymphoma." _American Association for Cancer Research (AACR) Annual Meeting_, 2018, submitted.**
+
+Vong Q, Nye C, Hause RJ, Clouser C, Jones J, Burleigh S, Borges CM, Chin SY, Marco E, Barrera L, Da Silva J, Harbinski F, Giannoukos G, Dhanapal V, **Jiang Y**, Ruth Salmon R, Wilson CJ, Myer VE, Welstead GG, Bond CJ and Sather BD. **"Inhibiting TGF$\beta$ Signaling in CAR T-Cells May Significantly Enhance Efficacy of Tumor Immunotherapy." _American Society of Hematology (ASH) 59th Annual Meeting_, 2017.**
+
+Works M, Soni N, Hauskins C, Sierra C, Baturevych A, Jones J, Curtis W, Johnstone T, Kugler D, **Jiang Y**, Hause RJ,  Sather BD, Salmon R and Ports M. **"Lenalidomide Enhances Anti-Bcma Chimeric Antigen Receptor T Cell Function Against Multiple Myeloma." _American Society of Hematology (ASH) 59th Annual Meeting_, 2017.**
+
+Chadwick E, Noll A, **Jiang Y**, Hause RJ, Ponce R, Levitsky H, Salmon R. **"A syngeneic mouse model of CAR-T mediated toxicity and neuroinflammation." _The Society for Immunotherapy of Cancer's (SITC) 32nd Annual Meeting_, 2017.**
+
+Thomas EP, Jessup HK, Qin J, **Jiang Y**, Swanson C, Baturevych A, Swenson S, Prentice K, Hause RJ, Levitsky H, Ports M. **"IDO1-mediated tryptophan depletion potently inhibits CAR-T functionality as part of a CAR-T driven adaptive immune resistance response in the tumor microenvironment." _The Society for Immunotherapy of Cancer's (SITC) 32nd Annual Meeting_, 2017.**

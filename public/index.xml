@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yue Jiang</title>
+    <link>/</link>
+    <description>Recent content on Yue Jiang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/cv/</link>
+      <pubDate>Wed, 27 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/cv/</guid>
+      <description>Education Duke University, Durham, NC
+ PhD, Genetics and Genomics, 2009-2015 MS, Statistics, 2013-2015  Peking University, Beijing, China
+ BS, School of Life Sciences, 2004-2008   Experience Juno Therapeutics, Seattle, WA
+ Data Scientist, 2016-present  Verily Life Sciences, Mountain View, CA
+ Decision Support Engineering Analyst Intern, summer 2015   </description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>/post/hello-world/</link>
+      <pubDate>Wed, 27 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/hello-world/</guid>
+      <description>Hello world! This is the end of 2017, and I’m on my winter break. So I thought I’d play with the blogdown package and see if I can come up with some sort of site from within R. So here I am.
+你好，世界</description>
+    </item>
+    
+    <item>
+      <title>Jiang, Yue 姜岳</title>
+      <link>/about/</link>
+      <pubDate>Wed, 27 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Neuroscientist by training, used to work on smell. Now working on the analytics side of immuno-oncology at Juno Therapeutics.
+生物制药从业者。念书的时候是研究嗅觉的。现在研究肿瘤免疫。
+ Google Scholar GitHub LinkedIn Twitter  </description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>/publications/</link>
+      <pubDate>Wed, 27 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/publications/</guid>
+      <description>Journals Grigaityte K, Carter JA, Goldfless SJ, Jeffery EW, Hause RJ, Jiang Y, Koppstein D, Briggs AW, Church GM, Vigneault F, Atwal GS. “Single-cell sequencing reveals \(\alpha\beta\) chain pairing shapes the T cell repertoire.” bioRxiv, 2017.
+Ibarra-Soria X, Nakahara TS, Lilue J, Jiang Y, Trimmer C, Souza MA, Netto PH, Ikegami K, Murphy NR, Kusma M, Kirton A, Saraiva LR, Keane TM, Matsunami H, Mainland JD, Papes F, Logan DW. “Variation in olfactory neuron repertoires is genetically controlled and environmentally modulated.</description>
+    </item>
+    
+  </channel>
+</rss>

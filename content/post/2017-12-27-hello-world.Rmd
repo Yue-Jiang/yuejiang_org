@@ -1,0 +1,13 @@
+---
+title: Hello World
+author: Yue Jiang
+date: '2017-12-27'
+slug: hello-world
+categories: []
+tags: []
+---
+
+Hello world! This is the end of 2017, and I'm on my winter break. So I thought I'd play with the `blogdown` package and see if I can come up with some sort of site from within `R`. So here I am.
+
+你好，世界
+
