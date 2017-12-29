@@ -34,6 +34,16 @@
     </item>
     
     <item>
+      <title></title>
+      <link>/publications/</link>
+      <pubDate>Wed, 27 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/publications/</guid>
+      <description>Journals Grigaityte K, Carter JA, Goldfless SJ, Jeffery EW, Hause RJ, Jiang Y, Koppstein D, Briggs AW, Church GM, Vigneault F, Atwal GS. “Single-cell sequencing reveals \(\alpha\beta\) chain pairing shapes the T cell repertoire.” bioRxiv, 2017.
+Ibarra-Soria X, Nakahara TS, Lilue J, Jiang Y, Trimmer C, Souza MA, Netto PH, Ikegami K, Murphy NR, Kusma M, Kirton A, Saraiva LR, Keane TM, Matsunami H, Mainland JD, Papes F, Logan DW. “Variation in olfactory neuron repertoires is genetically controlled and environmentally modulated.</description>
+    </item>
+    
+    <item>
       <title>Hello World</title>
       <link>/post/hello-world/</link>
       <pubDate>Wed, 27 Dec 2017 00:00:00 +0000</pubDate>
@@ -52,16 +62,6 @@
       <description>Neuroscientist by training, used to work on smell. Now working on the analytics side of immuno-oncology at Juno Therapeutics.
 生物制药从业者。念书的时候是研究嗅觉的。现在研究肿瘤免疫。
  Google Scholar GitHub LinkedIn Twitter  </description>
-    </item>
-    
-    <item>
-      <title>Publications</title>
-      <link>/publications/</link>
-      <pubDate>Wed, 27 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/publications/</guid>
-      <description>Journals Grigaityte K, Carter JA, Goldfless SJ, Jeffery EW, Hause RJ, Jiang Y, Koppstein D, Briggs AW, Church GM, Vigneault F, Atwal GS. “Single-cell sequencing reveals \(\alpha\beta\) chain pairing shapes the T cell repertoire.” bioRxiv, 2017.
-Ibarra-Soria X, Nakahara TS, Lilue J, Jiang Y, Trimmer C, Souza MA, Netto PH, Ikegami K, Murphy NR, Kusma M, Kirton A, Saraiva LR, Keane TM, Matsunami H, Mainland JD, Papes F, Logan DW. “Variation in olfactory neuron repertoires is genetically controlled and environmentally modulated.</description>
     </item>
     
   </channel>
