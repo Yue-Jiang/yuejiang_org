@@ -1,0 +1,85 @@
+---
+title: Show me what you got
+author: Yue Jiang
+date: '2017-12-28'
+slug: show-me-what-you-got
+categories: []
+tags: []
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message=FALSE, warning=FALSE)
+```
+
+![](https://media.giphy.com/media/26DOs997h6fgsCthu/giphy.gif)
+
+Alright, let's see what we can do here. Too much Iris could be boring, so I thought I'd contribute some data by myself. Since my fitbit stopped working, I've switched back to my old Garmin forerunner 10, and it turns out that you can downlowd .csv file of previous activities through Garmin connect. Now that's pretty cool - I'll just use this data.
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(plotly)
+input_df <- read_csv("../../data/Activities.csv",
+                     na=c("--"),
+                     col_types=list(
+                       Time=col_character(),
+                       `Avg Pace`=col_character(),
+                       `Best Pace`=col_character()))
+```
+
+This is a shabby Forerunner 10 so I don't get all those fancy metrics such as stride. So I'll remove useless columns. As always, date / time is a mess, so I'll also manually clean up the duration and pace columns. Let's see if DT works.
+
+```{r}
+df <- input_df[c("Date", "Title", "Distance", "Time", "Avg Pace", "Best Pace", "Elev Gain", "Elev Loss")] %>%
+  # Time is the duration of runs. Make it numeric and rename to Duration
+  separate(Time, c("H", "M", "S"), sep=":", fill="left") %>%
+  replace_na(list(H="0", M="0", S="0")) %>%
+  mutate(Duration=as.numeric(H) + as.numeric(M) / 60 + as.numeric(S) / 3600) %>%
+  select(-c(H, M, S)) %>%
+  # Avg Pace should use unit minute
+  separate(`Avg Pace`, c("M", "S"), sep=":", fill="left") %>%
+  replace_na(list(M="0", S="0")) %>%
+  mutate(`Avg Pace`=as.numeric(M) + as.numeric(S) / 60) %>%
+  select(-c(M, S)) %>%
+  # Best Pace should also use unit minute
+  separate(`Best Pace`, c("M", "S"), sep=":", fill="left") %>%
+  replace_na(list(M="0", S="0")) %>%
+  mutate(`Best Pace`=as.numeric(M) + as.numeric(S) / 60) %>%
+  select(-c(M, S)) %>%
+  filter(Distance > 0)
+
+# there's this one time I forgot to turn the watch off, and it ended up giving rediculous duration. Remove...
+df <- df[df$Date != as_datetime("2017-07-26 08:29:41 UTC"), ]
+
+# Title contains location, parse it out
+df <- df %>%
+  mutate(Location=gsub(" Running", "", Title)) %>%
+  mutate(Location=ifelse(.$Location == "Untitled", "Durham", .$Location))
+
+# That's pretty much all the cleaning.
+DT::datatable(df)
+```
+
+Has my distance improved? Looks like so.
+
+```{r, fig.width=5, fig.height=5}
+ggplot(df, aes(Date, Distance)) +
+  geom_point(aes(color=Location), alpha=0.8) +
+  theme_light()
+```
+
+Has my pace improved? Not very obvious. Mainly I want to see if plotly works, so let's add some text labels.
+
+```{r, fig.width=10, fig.height=5}
+p <- ggplot(df, aes(Date, `Avg Pace`)) +
+  geom_point(aes(color=Location,
+                 size=Distance,
+                 text=sprintf("Distance: %skm\nDuration: %sh\nElev Gain: %sm\nElev Loss: %sm", round(Distance, 2), round(Duration,2), `Elev Gain`, `Elev Loss`)),
+             alpha=0.5) +
+  geom_smooth(method="loess", span=0.1, se=FALSE, color="orangered", size=0.4) +
+  ylim(c(4, 10)) +
+  theme_light()
+ggplotly(p, tooltip=c("text", "colour"))
+```
+
+So plotly does work. 
