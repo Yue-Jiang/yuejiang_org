@@ -13,7 +13,9 @@ knitr::opts_chunk$set(message=FALSE, warning=FALSE)
 
 ![](https://media.giphy.com/media/26DOs997h6fgsCthu/giphy.gif)
 
-Alright, let's see what we can do here. Too much Iris could be boring, so I thought I'd contribute some data by myself. Since my fitbit stopped working, I've switched back to my old Garmin forerunner 10, and it turns out that you can downlowd .csv file of previous activities through Garmin connect. Now that's pretty cool - I'll just use this data.
+Alright, let's see what we can do here. Too much `iris` could be boring, so I thought I'd contribute some data by myself. Since my fitbit stopped working early this year, I've switched back to my old Garmin forerunner 10, and it turns out that you can downlowd .csv file of previous activities through Garmin connect. Now that's pretty cool - I'll just use this data.
+
+# The data
 
 ```{r}
 library(tidyverse)
@@ -27,7 +29,7 @@ input_df <- read_csv("../../data/Activities.csv",
                        `Best Pace`=col_character()))
 ```
 
-This is a shabby Forerunner 10 so I don't get all those fancy metrics such as stride. So I'll remove useless columns. As always, date / time is a mess, so I'll also manually clean up the duration and pace columns. Let's see if DT works.
+This is a shabby Forerunner 10 so I don't get all those fancy metrics such as heart rate and stride. So I'll remove those useless empty columns. As always, date / time is a mess, so I'll also manually clean up the duration and pace columns. Let's see if DT works after cleaning up the data.
 
 ```{r}
 df <- input_df[c("Date", "Title", "Distance", "Time", "Avg Pace", "Best Pace", "Elev Gain", "Elev Loss")] %>%
@@ -60,6 +62,8 @@ df <- df %>%
 DT::datatable(df, options = list(pageLength = 5, scrollX = TRUE))
 ```
 
+# Make some plots
+
 Has my distance improved? Looks like so.
 
 ```{r, fig.width=10, fig.height=5}
@@ -68,7 +72,7 @@ ggplot(df, aes(Date, Distance)) +
   theme_light()
 ```
 
-Has my pace improved? Not very obvious. Mainly I want to see if plotly works, so let's add some text labels.
+Has my pace improved? Not very obvious. Anyways I just want to see if plotly works, so let's add some text labels.
 
 ```{r, fig.width=10, fig.height=5}
 p <- ggplot(df, aes(Date, `Avg Pace`)) +
@@ -83,3 +87,9 @@ ggplotly(p, tooltip=c("text", "colour"))
 ```
 
 So plotly does work. 
+
+# Side Notes
+
+- `blogdown` is pretty easy to use. Yesterday I read the first chapter of the [`blogdown book`](https://bookdown.org/yihui/blogdown), bought this domain name, registered an account at [netlify](https://www.netlify.com), typed like 5 `blogdown` commands, pushed the site to github, linked the repo to netlify and that's it. I still know nothing about Hugo, which I'm going to learn about in the second chapter of the `blogdown` book.
+
+- I recently realized a lot of R related tools I use are authored by [Yihui Xie, 谢益辉](https://yihui.name/), including `knitr`, `xaringan`, and this `blogdown`. Looked through his blog over the past like 10 years. 这是个人才啊。
