@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Yue Jiang | 姜岳</title>
-    <link>/</link>
+    <link>https://yuejiang.org/</link>
     <description>Recent content on Yue Jiang | 姜岳</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 28 Dec 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://yuejiang.org/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Show me what you got</title>
-      <link>/2017/12/28/show-me-what-you-got/</link>
+      <link>https://yuejiang.org/2017/12/28/show-me-what-you-got/</link>
       <pubDate>Thu, 28 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/12/28/show-me-what-you-got/</guid>
+      <guid>https://yuejiang.org/2017/12/28/show-me-what-you-got/</guid>
       <description>Alright, let’s see what we can do here. Too much iris could be boring, so I thought I’d contribute some data by myself. Since my fitbit stopped working early this year, I’ve switched back to my old Garmin forerunner 10, and it turns out that you can downlowd .csv file of previous activities through Garmin connect. Now that</description>
     </item>
     
     <item>
       <title></title>
-      <link>/cv/</link>
+      <link>https://yuejiang.org/cv/</link>
       <pubDate>Wed, 27 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/cv/</guid>
+      <guid>https://yuejiang.org/cv/</guid>
       <description>Education Duke University, Durham, NC
  PhD, Genetics and Genomics, 2009-2015 MS, Statistics, 2013-2015  Peking University, Beijing, China
  BS, School of Life Sciences, 2004-2008   Experience Juno Therapeutics, Boston, MA \(\rightarrow\) Seattle, WA
@@ -35,29 +35,29 @@
     
     <item>
       <title></title>
-      <link>/publications/</link>
+      <link>https://yuejiang.org/publications/</link>
       <pubDate>Wed, 27 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/publications/</guid>
+      <guid>https://yuejiang.org/publications/</guid>
       <description>Journals Grigaityte K, Carter JA, Goldfless SJ, Jeffery EW, Hause RJ, Jiang Y, Koppstein D, Briggs AW, Church GM, Vigneault F, Atwal GS. “Single-cell sequencing reveals \(\alpha\beta\) chain pairing shapes the T cell repertoire.” bioRxiv, 2017.
 Ibarra-Soria X, Nakahara TS, Lilue J, Jiang Y, Trimmer C, Souza MA, Netto PH, Ikegami K, Murphy NR, Kusma M, Kirton A, Saraiva LR, Keane TM, Matsunami H, Mainland JD, Papes F, Logan DW. “Variation in olfactory neuron repertoires is genetically controlled and environmentally modulated.</description>
     </item>
     
     <item>
       <title>Hello World</title>
-      <link>/2017/12/27/hello-world/</link>
+      <link>https://yuejiang.org/2017/12/27/hello-world/</link>
       <pubDate>Wed, 27 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/12/27/hello-world/</guid>
+      <guid>https://yuejiang.org/2017/12/27/hello-world/</guid>
       <description>Hello world! This is the end of 2017, and I’m on my winter break. So I thought I’d play with the blogdown package and see if I can come up with some sort of site from within R. So here I am. 你好，世界</description>
     </item>
     
     <item>
       <title>Jiang, Yue 姜岳</title>
-      <link>/about/</link>
+      <link>https://yuejiang.org/about/</link>
       <pubDate>Wed, 27 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/about/</guid>
+      <guid>https://yuejiang.org/about/</guid>
       <description>Neuroscientist by training, used to work on smell. Now working on the analytics side of immuno-oncology at Juno Therapeutics. 生物制药从业者。念书的时候是研究嗅觉的。现在研究肿瘤免疫。 Google Scholar GitHub LinkedIn Twitter</description>
     </item>
     
