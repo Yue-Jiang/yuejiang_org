@@ -1,2 +1,2 @@
-My personal website at [yuejiang.org](yuejiang.org).
-Made with `blogdown` in `RStudio`, served through netlify.
+My personal website at [`yuejiang.org`](https://yuejiang.org/).
+Made with `blogdown` in `RStudio`, served through netlify. Why `.org`? Because `yuejiang.com` isn't available...
