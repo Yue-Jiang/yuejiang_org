@@ -90,6 +90,6 @@ So plotly does work.
 
 # Side Notes
 
-- `blogdown` is pretty easy to use. Yesterday I read the first chapter of the [`blogdown book`](https://bookdown.org/yihui/blogdown), bought this domain name, registered an account at [netlify](https://www.netlify.com), typed like 5 `blogdown` commands, pushed the site to github, linked the repo to netlify and that's it. I still know nothing about Hugo, which I'm going to learn about in the second chapter of the `blogdown` book.
+- `blogdown` is pretty easy to use. Yesterday I read the first chapter of [the `blogdown` book](https://bookdown.org/yihui/blogdown), bought this domain name, registered an account at [netlify](https://www.netlify.com), typed like 5 `blogdown` commands, pushed the site to github, linked the repo to netlify and that's it. I still know nothing about Hugo, which I'm going to learn about in the second chapter of the `blogdown` book.
 
 - I recently realized a lot of R related tools I use are authored by [Yihui Xie, 谢益辉](https://yihui.name/), including `knitr`, `xaringan`, and this `blogdown`. Looked through his blog over the past like 10 years. 这是个人才啊。
