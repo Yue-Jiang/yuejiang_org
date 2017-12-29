@@ -57,12 +57,12 @@ df <- df %>%
   mutate(Location=ifelse(.$Location == "Untitled", "Durham", .$Location))
 
 # That's pretty much all the cleaning.
-DT::datatable(df)
+DT::datatable(df, options = list(pageLength = 5, scrollX = TRUE))
 ```
 
 Has my distance improved? Looks like so.
 
-```{r, fig.width=5, fig.height=5}
+```{r, fig.width=10, fig.height=5}
 ggplot(df, aes(Date, Distance)) +
   geom_point(aes(color=Location), alpha=0.8) +
   theme_light()
