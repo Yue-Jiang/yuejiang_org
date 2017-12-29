@@ -1,13 +1,15 @@
-baseurl = "/"
+baseurl = "https://yuejiang.org/"
 languageCode = "en-us"
-title = "Yue Jiang"
+title = "Yue Jiang | 姜岳"
 theme = "hugo-lithium-theme"
-googleAnalytics = ""
-disqusShortname = ""
+googleAnalytics = "UA-111737350-1"
+disqusShortname = "disqus_yfdGv8gdO5"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+enableemoji = true
+hasCJKLanguage = true
 
 [permalinks]
-    about = "/:year/:month/:day/:slug/"
+    post = "/:year/:month/:day/:slug/"
 
 [[menu.main]]
     name = "About"

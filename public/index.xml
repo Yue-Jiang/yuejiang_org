@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Yue Jiang</title>
+    <title>Yue Jiang | 姜岳</title>
     <link>/</link>
-    <description>Recent content on Yue Jiang</description>
+    <description>Recent content on Yue Jiang | 姜岳</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 28 Dec 2017 00:00:00 +0000</lastBuildDate>
@@ -13,11 +13,11 @@
     
     <item>
       <title>Show me what you got</title>
-      <link>/post/show-me-what-you-got/</link>
+      <link>/2017/12/28/show-me-what-you-got/</link>
       <pubDate>Thu, 28 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/show-me-what-you-got/</guid>
-      <description>Alright, let’s see what we can do here. Too much iris could be boring, so I thought I’d contribute some data by myself. Since my fitbit stopped working early this year, I’ve switched back to my old Garmin forerunner 10, and it turns out that you can downlowd .csv file of previous activities through Garmin connect. Now that’s pretty cool - I’ll just use this data.</description>
+      <guid>/2017/12/28/show-me-what-you-got/</guid>
+      <description>Alright, let’s see what we can do here. Too much iris could be boring, so I thought I’d contribute some data by myself. Since my fitbit stopped working early this year, I’ve switched back to my old Garmin forerunner 10, and it turns out that you can downlowd .csv file of previous activities through Garmin connect. Now that</description>
     </item>
     
     <item>
@@ -45,12 +45,11 @@ Ibarra-Soria X, Nakahara TS, Lilue J, Jiang Y, Trimmer C, Souza MA, Netto PH, Ik
     
     <item>
       <title>Hello World</title>
-      <link>/post/hello-world/</link>
+      <link>/2017/12/27/hello-world/</link>
       <pubDate>Wed, 27 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/hello-world/</guid>
-      <description>Hello world! This is the end of 2017, and I’m on my winter break. So I thought I’d play with the blogdown package and see if I can come up with some sort of site from within R. So here I am.
-你好，世界</description>
+      <guid>/2017/12/27/hello-world/</guid>
+      <description>Hello world! This is the end of 2017, and I’m on my winter break. So I thought I’d play with the blogdown package and see if I can come up with some sort of site from within R. So here I am. 你好，世界</description>
     </item>
     
     <item>
@@ -59,9 +58,7 @@ Ibarra-Soria X, Nakahara TS, Lilue J, Jiang Y, Trimmer C, Souza MA, Netto PH, Ik
       <pubDate>Wed, 27 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>Neuroscientist by training, used to work on smell. Now working on the analytics side of immuno-oncology at Juno Therapeutics.
-生物制药从业者。念书的时候是研究嗅觉的。现在研究肿瘤免疫。
- Google Scholar GitHub LinkedIn Twitter  </description>
+      <description>Neuroscientist by training, used to work on smell. Now working on the analytics side of immuno-oncology at Juno Therapeutics. 生物制药从业者。念书的时候是研究嗅觉的。现在研究肿瘤免疫。 Google Scholar GitHub LinkedIn Twitter</description>
     </item>
     
   </channel>
