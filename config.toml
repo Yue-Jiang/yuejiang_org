@@ -34,8 +34,8 @@ hasCJKLanguage = true
     MathJaxVersion = "2.7.1"
 
     [params.logo]
-    url = "sticker.png"
+    url = "logo.png"
     width = 50
     height = 50
-    alt = "Sticker"
+    alt = "Logo"
 

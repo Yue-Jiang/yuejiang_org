@@ -18,7 +18,9 @@
     </div>
   </article>
 
+  {{ if eq .Section "post" }}
   {{ partial "disqus.html" .}}
+  {{ end }}
 
 </main>
 
