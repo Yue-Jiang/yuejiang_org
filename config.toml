@@ -32,12 +32,12 @@ hasCJKLanguage = true
 
     MathJaxCDN = "//cdn.bootcss.com"
     MathJaxVersion = "2.7.1"
+    
+    GithubEdit = "https://github.com/Yue-Jiang/yuejiang_org/edit/master/content/"
 
     [params.logo]
     url = "logo.png"
     width = 50
     height = 50
     alt = "Logo"
-    
-    GithubEdit = "https://github.com/Yue-Jiang/yuejiang_org/edit/master/content/"
 

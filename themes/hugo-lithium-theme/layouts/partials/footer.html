@@ -18,12 +18,11 @@
 
           {{ with .Site.Params.GithubEdit}}
           <li>
-            <a href='{{ . }}{{ $.Scratch.Get "FilePath" }}'>Edit this page</a>
+            <a href='{{ . }}{{ $.Scratch.Get "FilePath" }}' class="footer-links-kudos">Edit on <img src="{{ "images/github-logo.png" | relURL }}" width="22" height="22"></a>
           </li>
           {{ end }}
 
           {{ end }}
-
         </ul>
       </footer>
 
