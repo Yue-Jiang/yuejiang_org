@@ -5,6 +5,9 @@ date: '2017-12-28'
 slug: show-me-what-you-got
 categories: []
 tags: []
+output:
+  blogdown::html_page:
+    toc: true
 ---
 
 ```{r setup, include=FALSE}

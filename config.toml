@@ -38,4 +38,6 @@ hasCJKLanguage = true
     width = 50
     height = 50
     alt = "Logo"
+    
+    GithubEdit = "https://github.com/Yue-Jiang/yuejiang_org/edit/master/content/"
 
