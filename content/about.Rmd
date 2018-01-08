@@ -10,8 +10,3 @@ tags: []
 Neuroscientist by training, used to work on smell. Now working on the analytics side of immuno-oncology at [Juno Therapeutics](https://www.junotherapeutics.com/).
 
 生物制药从业者。念书的时候是研究嗅觉的。现在研究肿瘤免疫。
-
-- [Google Scholar](https://scholar.google.com/citations?user=Zhp1B74AAAAJ&hl=en)
-- [GitHub](https://github.com/Yue-Jiang)
-- [LinkedIn](https://www.linkedin.com/in/yue-jiang-a1a51119/)
-- [Twitter](https://twitter.com/Yue__Jiang)

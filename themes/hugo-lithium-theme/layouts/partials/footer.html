@@ -1,15 +1,15 @@
       <footer class="footer">
         <ul class="footer-links">
+
+          {{ if .File.Path }}
+
+          {{ $Rmd := (print .File.BaseFileName ".Rmd") }}
           <li>
             <a href="{{ .Site.RSSLink | relURL }}" type="application/rss+xml" target="_blank">RSS feed</a>
           </li>
           <li>
             <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="{{ "images/hugo-logo.png" | relURL }}" width="22" height="22"></a>
           </li>
-          {{ if .File.Path }}
-
-          {{ $Rmd := (print .File.BaseFileName ".Rmd") }}
-
           {{ if (where (readDir (print "content/" .File.Dir)) "Name" $Rmd) }}
           {{ $.Scratch.Set "FilePath" (print .File.Dir $Rmd) }}
           {{ else }}
@@ -21,6 +21,14 @@
             <a href='{{ . }}{{ $.Scratch.Get "FilePath" }}' class="footer-links-kudos">Edit on <img src="{{ "images/github-logo.png" | relURL }}" width="22" height="22"></a>
           </li>
           {{ end }}
+
+          {{else}}
+          <li>
+            <a href='https://scholar.google.com/citations?user=Zhp1B74AAAAJ&hl=en' class="footer-links-kudos"><img src="{{ "images/gscholar-logo.png" | relURL }}" width="22" height="22"></a>
+            <a href='https://github.com/Yue-Jiang' class="footer-links-kudos"><img src="{{ "images/github-logo.png" | relURL }}" width="22" height="22"></a>
+            <a href='https://www.linkedin.com/in/yue-jiang-a1a51119/' class="footer-links-kudos"><img src="{{ "images/linkedin-logo.png" | relURL }}" width="22" height="22"></a>
+            <a href='https://twitter.com/Yue__Jiang' class="footer-links-kudos"><img src="{{ "images/twitter-logo.png" | relURL }}" width="22" height="22"></a>
+          </li>
 
           {{ end }}
         </ul>

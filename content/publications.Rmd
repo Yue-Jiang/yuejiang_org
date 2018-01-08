@@ -37,3 +37,6 @@ Works M, Soni N, Hauskins C, Sierra C, Baturevych A, Jones J, Curtis W, Johnston
 Chadwick E, Noll A, **Jiang Y**, Hause RJ, Ponce R, Levitsky H, Salmon R. **"A syngeneic mouse model of CAR-T mediated toxicity and neuroinflammation." _The Society for Immunotherapy of Cancer's (SITC) 32nd Annual Meeting_, 2017.**
 
 Thomas EP, Jessup HK, Qin J, **Jiang Y**, Swanson C, Baturevych A, Swenson S, Prentice K, Hause RJ, Levitsky H, Ports M. **"IDO1-mediated tryptophan depletion potently inhibits CAR-T functionality as part of a CAR-T driven adaptive immune resistance response in the tumor microenvironment." _The Society for Immunotherapy of Cancer's (SITC) 32nd Annual Meeting_, 2017.**
+
+
+Goldfless SJ, Croft A, Brandt CS, Jeffery EW, Connor KL, Clouser CR, **Jiang Y**, Johnstone TG, Koppstein D, Nguyen H, Peper H, Toy D, Sissons J, Hause RJ, Briggs AW, Vigneault F. **"Discovery of Rare T Cell Receptors of Therapeutic Value by Simultaneous Detection of Sequence, Antigen Specificity and Cell Phenotype from Millions of Single Cells in Emulsion." _Keystone Symposia on Molecular and Cellular Biology_, 2017**
