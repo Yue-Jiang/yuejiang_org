@@ -20,7 +20,7 @@ Peking University, Beijing, China
 
 # Experience
 
-Juno Therapeutics, Boston, MA $\rightarrow$ Seattle, WA
+Juno Therapeutics $\rightarrow$ Celgene, Boston, MA $\rightarrow$ Seattle, WA
 
 - Data Scientist $\rightarrow$ Senior Data Scientist, 2016-present
 
