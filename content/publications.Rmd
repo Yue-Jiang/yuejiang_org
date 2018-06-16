@@ -8,6 +8,7 @@ tags: []
 ---
 
 # Journals
+[Yi Yin, **Yue Jiang**, Joel B. Berletch, Christine M. Disteche, William S. Noble, Frank J. Steemers, Andrew C. Adey,  Jay A. Shendure. **"High-throughput mapping of meiotic crossover and chromosome mis-segregation events in interspecific hybrid mice." _bioRxiv_, 2018.**](https://www.biorxiv.org/content/early/2018/06/12/338053)
 
 [Grigaityte K, Carter JA, Goldfless SJ, Jeffery EW, Hause RJ, **Jiang Y**, Koppstein D, Briggs AW, Church GM, Vigneault F, Atwal GS. **"Single-cell sequencing reveals $\alpha\beta$ chain pairing shapes the T cell repertoire." _bioRxiv_, 2017.**](https://www.biorxiv.org/content/early/2017/11/02/213462)
 
