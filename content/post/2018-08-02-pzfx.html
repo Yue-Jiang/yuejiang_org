@@ -1,0 +1,114 @@
+---
+title: Reading Prism files into R
+author: Yue Jiang
+date: '2018-08-02'
+slug: pzfx
+categories: []
+tags: []
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#example-prism-files">Example Prism files</a></li>
+<li><a href="#main-functionality">Main functionality</a></li>
+<li><a href="#additional-features">Additional features</a></li>
+</ul>
+</div>
+
+<p><img src="https://www.graphpad.com/www/graphpad/includes/themes/graphpad/images/mainpage-banner-graphpad-prism7.png" style="width:100.0%" /></p>
+<p>Back in the early days of grad school I used to use Prism GraphPad a lot before switching to R. Prism is a great piece of software and I’ve seen scientists using them a lot. Recently I wanted to import a Prism <code>.pzfx</code> file into R, and as usual, I went to Google expecting there’ll be some <code>readxl</code> or <code>readr</code> equivalent for prism. Surprisingly, I didn’t find much more than <a href="https://stackoverflow.com/questions/25506099/r-import-xml-from-graphpad-prism">this SO question</a>. So, how do you import a prism file into R? The easiest way is probably export the prism file to a text file then read it into R. But this just doesn’t feel that good, right? So I started looking into the file structure of <code>.pzfx</code> files and tried to parse it by myself. Starting from Prism5, in addition to the binary file it also stores the data table in XML format. After some trials and errors I made a little <a href="https://github.com/Yue-Jiang/pzfx">R package</a> to read <code>.pzfx</code> files into R data frames. I’ll briefly document how it works here.</p>
+<div id="example-prism-files" class="section level1">
+<h1>Example Prism files</h1>
+<p>As an example, I obtained some <code>.pzfx</code> files from <a href="https://elifesciences.org/articles/19535">this paper</a>. The file for Fig 1 looks like this: <img src="/post/2018-08-02-pzfx_files/elife-19535-fig1-data1-v1.png" alt="data1" style="width:100.0%" /></p>
+</div>
+<div id="main-functionality" class="section level1">
+<h1>Main functionality</h1>
+<p>List tables from a <code>.pzfx</code> file:</p>
+<pre class="r"><code>library(pzfx)
+pzfx_tables(&quot;../../static/data/benoit_elife_2017/elife-19535-fig1-data1-v1.pzfx&quot;)</code></pre>
+<pre><code>## [1] &quot;relative larval obp6 expression&quot;</code></pre>
+<p>Read one specific table into R:</p>
+<pre class="r"><code>df1 &lt;- read_pzfx(&quot;../../static/data/benoit_elife_2017/elife-19535-fig1-data1-v1.pzfx&quot;, table=&quot;relative larval obp6 expression&quot;)</code></pre>
+<p><code>NA</code>s will be added if the columns are of different lengths.</p>
+<pre class="r"><code>df1</code></pre>
+<pre><code>##    WT bactWgm+ bactWgm- Sgm+ bactapo Apo
+## 1  92     76.0      7.7  7.3     2.7 3.5
+## 2  73     67.5      5.5 12.1     3.6 6.0
+## 3 147     34.4     24.0  8.7     3.4 2.3
+## 4  80    107.0     15.6  4.5     6.4 8.4
+## 5  86     38.5     13.7  8.7     3.5 7.8
+## 6 143     89.0       NA 15.3      NA  NA</code></pre>
+</div>
+<div id="additional-features" class="section level1">
+<h1>Additional features</h1>
+<p>Prism allows user to strike out data. To accommodate this, an option <code>strike_action</code> is available in <code>read_pzfx</code>. One can choose to delete these values with <code>strike_action=&quot;exclude&quot;</code>, keep them with <code>&quot;keep&quot;</code>, or convert them to a trailing &quot;*&quot; with <code>&quot;star&quot;</code>. Note if <code>strike_action=&quot;star&quot;</code> the entire table will be converted to type <code>character</code>.</p>
+<p>Special formating of column names such as superscripts will be converted to regular strings.</p>
+<p>For example (I striked out data myself from the original table) when the input looks like this:
+<img src="/post/2018-08-02-pzfx_files/elife-19535-fig2-data1-v1_modified.png" alt="data2" style="width:100.0%" /></p>
+<pre class="r"><code>df2_e &lt;- read_pzfx(&quot;../../static/data/benoit_elife_2017/elife-19535-fig2-data1-v1_modified.pzfx&quot;,
+                   table=1,
+                   strike_action=&quot;exclude&quot;)
+df2_e</code></pre>
+<pre><code>##   siOBP6 siGFP siOPB6R
+## 1     NA  1420    1320
+## 2   1300    NA    1520
+## 3   1440  1370      NA
+## 4   1040    NA    1420
+## 5     NA  1520    1400
+## 6   1390    NA    1490
+## 7   1490  1300      NA</code></pre>
+<pre class="r"><code>df2_k &lt;- read_pzfx(&quot;../../static/data/benoit_elife_2017/elife-19535-fig2-data1-v1_modified.pzfx&quot;,
+                   table=1,
+                   strike_action=&quot;keep&quot;)
+df2_k</code></pre>
+<pre><code>##   siOBP6 siGFP siOPB6R
+## 1   1420  1420    1320
+## 2   1300  1290    1520
+## 3   1440  1370    1300
+## 4   1040  1280    1420
+## 5   1360  1520    1400
+## 6   1390  1380    1490
+## 7   1490  1300    1440</code></pre>
+<pre class="r"><code>df2_s &lt;- read_pzfx(&quot;../../static/data/benoit_elife_2017/elife-19535-fig2-data1-v1_modified.pzfx&quot;,
+                   table=1,
+                   strike_action=&quot;star&quot;)
+df2_s</code></pre>
+<pre><code>##   siOBP6 siGFP siOPB6R
+## 1  1420*  1420    1320
+## 2   1300 1290*    1520
+## 3   1440  1370   1300*
+## 4   1040 1280*    1420
+## 5  1360*  1520    1400
+## 6   1390 1380*    1490
+## 7   1490  1300   1440*</code></pre>
+<p>Like Excel, Prism also allows subcolumns. For example, you can have replicates in subcolumns:
+<img src="/post/2018-08-02-pzfx_files/elife-19535-fig2-data3-v1.png" alt="data3" style="width:100.0%" /></p>
+<p><code>read_pzfx</code> will automatically add <code>_1</code>, <code>_2</code> etc to the original column name to account for sub columns if they are replicates.</p>
+<pre class="r"><code>df3 &lt;- read_pzfx(&quot;../../static/data/benoit_elife_2017/elife-19535-fig2-data3-v1.pzfx&quot;)
+df3</code></pre>
+<pre><code>##   OBP6-2_1 OBP6-2_2 OBP6-2_3 OBP6-2_4 OBP6-2_5 GFP-2_1 GFP-2_2 GFP-2_3
+## 1     2448     3192     3168     3456     4128    4576    5968    1408
+##   GFP-2_4 GFP-2_5 OBP6R-2_1 OBP6R-2_2 OBP6R-2_3 OBP6R-2_4 OBP6R-2_5
+## 1    3392    2304      5212      3491      2710      4672      4339
+##   OBP6-6_1 OBP6-6_2 OBP6-6_3 OBP6-6_4 OBP6-6_5 GFP-6_1 GFP-6_2 GFP-6_3
+## 1       94       56       84      138      204     101     126      76
+##   GFP-6_4 GFP-6_5 OBP6R-6_1 OBP6R-6_2 OBP6R-6_3 OBP6R-6_4 OBP6R-6_5
+## 1     116     155        48       121        45       210        88</code></pre>
+<p>But also you can have subcolumns to mean different things, for example the first is the mean, second standard deviation, third the number of observations.
+<img src="/post/2018-08-02-pzfx_files/elife-19535-fig2-data3-v1_modified.png" alt="data3_modified" style="width:100.0%" /></p>
+<p>In this case, trailing <code>_MEAN</code>, <code>_SD</code>, <code>_N</code> will be added.</p>
+<pre class="r"><code>df3_mod &lt;- read_pzfx(&quot;../../static/data/benoit_elife_2017/elife-19535-fig2-data3-v1_modified.pzfx&quot;)
+df3_mod</code></pre>
+<pre><code>##   OBP6-2_MEAN OBP6-2_SD OBP6-2_N GFP-2_MEAN GFP-2_SD GFP-2_N OBP6R-2_MEAN
+## 1      3278.4  604.6857        5     3529.6 1807.136       5       4084.8
+##   OBP6R-2_SD OBP6R-2_N OBP6-6_MEAN OBP6-6_SD OBP6-6_N GFP-6_MEAN GFP-6_SD
+## 1   990.2872         5       115.2  57.73387        5      114.8 29.32064
+##   GFP-6_N OBP6R-6_MEAN OBP6R-6_SD OBP6R-6_N
+## 1       5        102.4   67.79602         5</code></pre>
+<p>Currently <code>read_pzfx</code> works for all these alternative subcolumn types by Prism7:
+<img src="/post/2018-08-02-pzfx_files/alternative_subcols_prism.png" alt="alternative_subcols" style="width:100.0%" /></p>
+</div>

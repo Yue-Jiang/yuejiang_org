@@ -24,7 +24,7 @@ Alright, let's see what we can do here. Too much `iris` could be boring, so I th
 library(tidyverse)
 library(lubridate)
 library(plotly)
-input_df <- read_csv("../../data/Activities.csv",
+input_df <- read_csv("../../static/data/Activities.csv",
                      na=c("--"),
                      col_types=list(
                        Time=col_character(),
