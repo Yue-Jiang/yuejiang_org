@@ -94,5 +94,6 @@ df3_mod
 ```
 
 Currently `read_pzfx` works for all these alternative subcolumn types by Prism7:
-![alternative_subcols](/post/2018-08-02-pzfx_files/alternative_subcols_prism.png){width=100%}
+
+![](/post/2018-08-02-pzfx_files/alternative_subcols_prism.png){width=60%}
 
