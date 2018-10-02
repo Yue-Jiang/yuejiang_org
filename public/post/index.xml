@@ -17,7 +17,7 @@
       <pubDate>Thu, 02 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/08/02/pzfx/</guid>
-      <description>Example Prism files Main functionality Additional features   Back in the early days of grad school I used to use Prism GraphPad a lot before switching to R. Prism is a great piece of software and I’ve seen scientists using them a lot. Recently I wanted to import a Prism .pzfx file into R, and as usual, I went to Google expecting there’ll be some readxl or readr equivalent for prism.</description>
+      <description>Example Prism files Main functionality Additional features    Back in the early days of grad school I used to use Prism GraphPad a lot before switching to R. Prism is a great piece of software and I’ve seen scientists using them a lot. Recently I wanted to import a Prism .pzfx file into R, and as usual, I went to Google expecting there’ll be some readxl or readr equivalent for prism.</description>
     </item>
     
     <item>
