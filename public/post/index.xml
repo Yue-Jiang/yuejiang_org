@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Yue Jiang | 姜岳</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Very basic use of tidyverse in R packages</title>
+      <link>/2018/11/18/using-tidyverse-tidyeval-in-r-packages/</link>
+      <pubDate>Sun, 18 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/11/18/using-tidyverse-tidyeval-in-r-packages/</guid>
+      <description>tl;dr Why bother? .data Alternatives and problems !! + sym filter_    tl;dr 90% of my usecases when putting a function that uses tidyverse with non-standard evaluation (NSE) into an R package can be resolved by importFrom rlang .data. In these cases, I’m only looking for a way to be able to use tidyverse internally in the package, and have it pass the R package check, rather than allowing the user to supply function arguments in the NSE form.</description>
+    </item>
     
     <item>
       <title>Reading Prism files into R</title>

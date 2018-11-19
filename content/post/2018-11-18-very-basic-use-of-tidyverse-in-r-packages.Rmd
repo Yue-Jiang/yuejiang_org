@@ -1,0 +1,139 @@
+---
+title: Very basic use of tidyverse in R packages
+author: Yue Jiang
+date: '2018-11-18'
+slug: using-tidyverse-tidyeval-in-r-packages
+categories: []
+tags: []
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message=FALSE, warning=FALSE)
+library(dplyr)
+library(rlang)
+```
+
+# tl;dr
+
+90% of my usecases when putting a function that uses tidyverse with non-standard evaluation (NSE) into an R package can be resolved by `importFrom rlang .data`. In these cases, I'm only looking for a way to be able to use tidyverse *internally* in the package, and have it pass the R package check, rather than allowing the user to supply function arguments in the NSE form.
+
+# Why bother?
+
+I don't think there is any reason to specifically use tidyverse (dplyr, tidyr, ggplot2 and so on) in R packages, and I'd prefer base R solutions. However, if one already uses tidyverse on a daily basis and has created a bunch of functions that she wants to make into a package, this seems a reasonable usecase.
+
+However, I can't use tidyverse functions in a package the same way as I use them interactively. Otherwise when I run package check (`devtools::check()` or `R CMD check`), it will complain because I have used NSE in my functions. For example, this function:
+
+```{r, eval=FALSE}
+#' Using non-standard evaluation in a function
+#' Results in NOTE: no visible binding for global variable "state"
+#'
+#' @param df A tibble
+#' @return A tibble
+#' @importFrom dplyr filter
+#' @export
+filter_nse <- function(df) {
+  filter(df, state == "treated")
+}
+```
+
+when included in a dummy package `pkgsandbox`, leads to the following `NOTE` during package check.
+
+```
+checking R code for possible problems ... NOTE
+filter_nse: no visible binding for global variable ‘state’
+Undefined global functions or variables:
+  state
+```
+
+# `.data`
+
+To suppress it, to my knowledge the way to go as of now (end of 2018) is to use `.data` from `rlang`. The function looks like this:
+
+```{r}
+#' Using .data in a function, existing column
+#'
+#' @param df A tibble
+#' @return A tibble
+#' @importFrom dplyr filter
+#' @importFrom rlang .data
+#' @export
+filter_dotdata <- function(df) {
+  filter(df, .data$state == "treated")
+}
+```
+
+Note that our `filter_*` functions are only intended to work with data `Puromycin` because of the specific column `state`:
+
+```{r}
+head(Puromycin, n=4)
+table(Puromycin$state)
+```
+
+As expected, this works:
+
+```{r}
+res <- pkgsandbox::filter_dotdata(Puromycin)
+table(res$state)
+```
+
+# Alternatives and problems
+
+## `!!` + `sym`
+
+After reading the ["Programming with dplyr" tutorial](https://dplyr.tidyverse.org/articles/programming.html), I had initially assumed I should always be using the `!!sym("column_name")` syntax. However it's not necessarily the case when `"column_name"` is internal to the function, i.e. not supplied to the function as an argument. Consider this function:
+
+```{r}
+#' Using !! sym in a function, existing column
+#'
+#' @param df A tibble
+#' @return A tibble
+#' @importFrom dplyr filter
+#' @importFrom rlang !! sym
+#' @export
+filter_bangbangsym <- function(df) {
+  filter(df, !!sym("state") == "treated")
+}
+```
+
+It works fine when `df` contains the `state` column:
+
+```{r}
+res <- pkgsandbox::filter_bangbangsym(Puromycin)
+table(res$state)
+```
+
+However, the problem comes when the input data doesn't have column `state`, but for some reason a variable `state` is available in the global environment. We expect this to fail because `iris` doesn't have a `state` column:
+
+```{r, error=TRUE}
+state <- "North Carolina"
+pkgsandbox::filter_dotdata(iris)
+```
+
+But the following doesn't fail! And the result I get is dependent on the value of `state` in my global environment. This can be dangerous when the function and environment gets more complicated.
+
+```{r}
+state <- "North Carolina"
+res_wrong_iris1 <- pkgsandbox::filter_bangbangsym(iris)
+nrow(res_wrong_iris1) # 0 because "North Carolina" != "treated"
+```
+
+```{r}
+state <- "treated"
+res_wrong_iris2 <- pkgsandbox::filter_bangbangsym(iris)
+nrow(res_wrong_iris2) # this didn't apply any filtering  because "treated" == "treated"
+```
+
+So indeed, these results silently depend on what's there in the evironment where the function gets called. This is obviously not ideal, and the same problem happens when we ignore the package check note and use NSE in our package:
+
+```{r}
+state <- "treated"
+res_wrong_iris3 <- pkgsandbox::filter_nse(iris)
+nrow(res_wrong_iris3)
+```
+
+## `filter_`
+
+The other alternative is to use the underscore verbs, in this case, `filter_`. Both of the following works and passes package check: `filter_(df, ~ state == "treated")` and `filter_(Puromycin, "state == 'treated'")`. But these `*_` verbs are phasing out, along with `aes_string` from `ggplot2`. So I guess these are not recommended either.
