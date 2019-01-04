@@ -20,7 +20,7 @@ Peking University, Beijing, China
 
 # Experience
 
-Juno Therapeutics $\rightarrow$ Celgene, Boston, MA $\rightarrow$ Seattle, WA
+AbVitro (Boston, MA) $\rightarrow$ Juno Therapeutics (Seattle, WA) $\rightarrow$ Celgene $\rightarrow$ Bristol-Myers Squibb^[All through acquisitions]
 
 - Data Scientist $\rightarrow$ Senior Data Scientist, 2016-present
 
