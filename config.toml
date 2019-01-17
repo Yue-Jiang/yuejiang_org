@@ -19,7 +19,7 @@ hasCJKLanguage = true
     url = "/publications/"
 [[menu.main]]
     name = "CV"
-    url = "/cv/"
+    url = "/yuejiang_cv/yuejiang_cv.html"
 
 [params]
     description = "Following tutorial to build a website through Hugo and blogdown."

@@ -1,0 +1,6 @@
+[submodule "static/slides/xaringan_example"]
+	path = static/slides/xaringan_example
+	url = https://github.com/Yue-Jiang/xaringan_example.git
+[submodule "static/yuejiang_cv"]
+	path = static/yuejiang_cv
+	url = https://github.com/Yue-Jiang/yuejiang_cv.git
