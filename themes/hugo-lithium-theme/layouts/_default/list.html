@@ -10,16 +10,13 @@
   </article>
   {{ else }}
   <div class="archive">
-    {{ range (where .Data.Pages "Section" "!=" "").GroupByDate "2006" }}
-    <h2 class="archive-title">{{ .Key }}</h2>
-    {{ range .Pages }}
+    {{ range (where .Data.Pages "Section" "!=" "") }}
     <article class="archive-item">
       <a href="{{ .RelPermalink }}" class="archive-item-link">{{ .Title }}</a>
       <span class="archive-item-date">
         {{ .Date.Format "2006/01/02" }}
       </span>
     </article>
-    {{ end }}
     {{ end }}
   </div>
   {{ end }}
