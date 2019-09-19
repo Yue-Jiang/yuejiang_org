@@ -8,9 +8,9 @@ tags: []
 ---
 
 # Journals
-[Yi Yin, **Yue Jiang**, Joel B. Berletch, Christine M. Disteche, William S. Noble, Frank J. Steemers, Andrew C. Adey,  Jay A. Shendure. **"High-throughput mapping of meiotic crossover and chromosome mis-segregation events in interspecific hybrid mice." _bioRxiv_, 2018.**](https://www.biorxiv.org/content/early/2018/06/12/338053)
+[Yin Y, **Jiang Y**, Lam KG, Berletch JB, Disteche CM, Noble WS, Steemers FJ, Camerini-Otero RD, Adey AC, Shendure JA. **"High-Throughput Single-Cell Sequencing with Linear Amplification" _Molecular Cell_, 2019.**](https://www.cell.com/molecular-cell/pdfExtended/S1097-2765(19)30618-5)
 
-[Grigaityte K, Carter JA, Goldfless SJ, Jeffery EW, Hause RJ, **Jiang Y**, Koppstein D, Briggs AW, Church GM, Vigneault F, Atwal GS. **"Single-cell sequencing reveals $\alpha\beta$ chain pairing shapes the T cell repertoire." _bioRxiv_, 2017.**](https://www.biorxiv.org/content/early/2017/11/02/213462)
+[Works M, Soni N, Hauskins C, Sierra C, Baturevych A, Jones JC, Curtis W, Carlson P, Johnstone TG, Kugler D, Hause RJ, **Jiang Y**, Wimberly L, Clouser CR, Jessup HK, Sather B, Salmon RA, Ports MO. **"Anti-B-cell maturation antigen chimeric antigen receptor T cell function against multiple myeloma is enhanced in the presence of lenalidomide" _Molecular Cancer Therapeutics_, 2019.**](https://mct.aacrjournals.org/content/early/2019/08/08/1535-7163.MCT-18-1146.long)
 
 [Ibarra-Soria X, Nakahara TS, Lilue J, **Jiang Y**, Trimmer C, Souza MA, Netto PH, Ikegami K, Murphy NR, Kusma M, Kirton A, Saraiva LR, Keane TM, Matsunami H, Mainland JD, Papes F, Logan DW. **"Variation in olfactory neuron repertoires is genetically controlled and environmentally modulated." _eLife_, 6: e21476, 2017.**](https://elifesciences.org/content/6/e21476)
 
