@@ -102,7 +102,7 @@ table(res$state)</code></pre>
 <p>However, the problem comes when the input data doesn’t have column <code>state</code>, but for some reason a variable <code>state</code> is available in the global environment. We expect this to fail because <code>iris</code> doesn’t have a <code>state</code> column:</p>
 <pre class="r"><code>state &lt;- &quot;North Carolina&quot;
 pkgsandbox::filter_dotdata(iris)</code></pre>
-<pre><code>## Error in filter_impl(.data, quo): Evaluation error: Column `state` not found in `.data`.</code></pre>
+<pre><code>## Column `state` not found in `.data`</code></pre>
 <p>But the following doesn’t fail! And the result I get is dependent on the value of <code>state</code> in my global environment. This can be dangerous when the function and environment gets more complicated.</p>
 <pre class="r"><code>state &lt;- &quot;North Carolina&quot;
 res_wrong_iris1 &lt;- pkgsandbox::filter_bangbangsym(iris)
