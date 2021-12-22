@@ -1,12 +1,12 @@
 ---
 title: Jiang, Yue 姜岳
 author: Yue Jiang
-date: '2017-12-27'
+date: '2021-12-21'
 slug: about
 categories: []
 tags: []
 ---
 
-Neuroscientist by training, used to work on smell. Now working on the analytics side of immuno-oncology at [Juno Therapeutics / Celgene](https://www.junotherapeutics.com/).
+Neuroscientist by training, used to work on smell. Worked on the analytics side of immuno-oncology. Now work on gene therapy with RNA editing.
 
-生物制药从业者。念书的时候是研究嗅觉的。现在研究肿瘤免疫。
+生物制药从业者。念书的时候是研究嗅觉的。上班之后研究肿瘤免疫。现在研究基因治疗。

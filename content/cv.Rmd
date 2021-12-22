@@ -1,7 +1,7 @@
 ---
 title: 
 author: Yue Jiang
-date: '2017-12-27'
+date: '2021-12-21'
 slug: cv
 categories: []
 tags: []
@@ -22,9 +22,13 @@ Peking University, Beijing, China
 
 # Experience
 
-AbVitro (Boston, MA) $\rightarrow$ Juno Therapeutics (Seattle, WA) $\rightarrow$ Celgene $\rightarrow$ Bristol-Myers Squibb^[All through acquisitions]
+Shape Therapeutics
 
-- Data Scientist $\rightarrow$ Senior Data Scientist, 2016-present
+- Senior Principal Data Scientist, 2021 - present
+
+AbVitro $\rightarrow$ Juno Therapeutics $\rightarrow$ Celgene $\rightarrow$ Bristol-Myers Squibb^[All through acquisitions]
+
+- Data Scientist $\rightarrow$ Associate Director, 2016-2021
 
 Google [X] $\rightarrow$ Verily Life Sciences, Mountain View, CA
 
