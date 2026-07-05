@@ -1,0 +1,9 @@
+# Netlify build configuration.
+# HUGO_VERSION pins the build to a modern Hugo (the old site built on 0.24.1);
+# keep this in sync with .tool-versions.
+[build]
+  publish = "public"
+  command = "hugo --gc --minify"
+
+[build.environment]
+  HUGO_VERSION = "0.163.3"
