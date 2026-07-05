@@ -1,43 +1,82 @@
-baseurl = "https://yuejiang.org/"
-languageCode = "en-us"
+baseURL = "https://yuejiang.org/"
 title = "Yue Jiang | 姜岳"
-theme = "hugo-lithium-theme"
-googleAnalytics = "UA-111737350-1"
-disqusShortname = "yuejiang"
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
-enableemoji = true
+theme = "PaperMod"
+enableEmoji = true
 hasCJKLanguage = true
+enableRobotsTXT = true
 
+# Which content section is the blog (used by the homepage post list)
+mainSections = ["post"]
+
+# Ignore legacy R Markdown sources so Hugo doesn't try to render them
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+# Preserve the original blogdown post URLs so existing links don't break
 [permalinks]
     post = "/:year/:month/:day/:slug/"
 
+# --- Allow publishing raw HTML: standalone files in static/, themed pages in content/,
+#     and inline HTML inside markdown posts ---
+[security]
+  allowContent = ['.*']
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# Analytics: Google Universal Analytics was shut off in 2023. To re-enable with GA4,
+# create a GA4 property and uncomment the line below with your Measurement ID.
+# [services.googleAnalytics]
+#   ID = "G-XXXXXXXXXX"
+
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  description = "Neuroscientist by training. Now working on gene therapy with RNA editing."
+
+  [params.homeInfoParams]
+    Title = "Yue Jiang | 姜岳 👋"
+    Content = """
+**Machine learning & computational biology for cell and gene therapy**
+
+Neuroscientist by training. Currently working on machine learning, bioinformatics and statistical analysis in biopharma.
+"""
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/Yue-Jiang"
+  [[params.socialIcons]]
+    name = "googlescholar"
+    url = "https://scholar.google.com/citations?user=Zhp1B74AAAAJ&hl=en"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/yuejiangyj31/"
+
+[[menu.main]]
+    name = "Posts"
+    url = "/post/"
+    weight = 1
 [[menu.main]]
     name = "About"
     url = "/about/"
+    weight = 2
 [[menu.main]]
     name = "Publications"
     url = "/publications/"
+    weight = 3
 [[menu.main]]
     name = "CV"
     url = "/cv/"
-
-[params]
-    description = "Following tutorial to build a website through Hugo and blogdown."
-
-    # options for highlight.js (version, additional languages, and theme)
-    highlightjsVersion = "9.11.0"
-    highlightjsCDN = "//cdn.bootcss.com"
-    highlightjsLang = ["r", "yaml"]
-    highlightjsTheme = "github"
-
-    MathJaxCDN = "//cdn.bootcss.com"
-    MathJaxVersion = "2.7.1"
-    
-    GithubEdit = "https://github.com/Yue-Jiang/yuejiang_org/edit/master/content/"
-
-    [params.logo]
-    url = "logo.png"
-    width = 50
-    height = 50
-    alt = "Logo"
-
+    weight = 4
+[[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 5

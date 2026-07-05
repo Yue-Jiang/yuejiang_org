@@ -4,7 +4,7 @@ author: Yue Jiang
 date: '2018-11-18'
 slug: using-tidyverse-tidyeval-in-r-packages
 categories: []
-tags: []
+tags: ["R"]
 output:
   blogdown::html_page:
     toc: true
