@@ -1,0 +1,5 @@
+{{- /* Render Disqus comments. Overrides PaperMod's placeholder partial.
+       Shortname comes from [services.disqus] in config.toml. */ -}}
+{{- if site.Config.Services.Disqus.Shortname }}
+{{- template "_internal/disqus.html" . }}
+{{- end }}

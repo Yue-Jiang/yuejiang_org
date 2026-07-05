@@ -33,6 +33,10 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 # [services.googleAnalytics]
 #   ID = "G-XXXXXXXXXX"
 
+# Disqus comments (legacy shortname; preserves the old blog-post comment threads).
+[services.disqus]
+  shortname = "yuejiang"
+
 [params]
   defaultTheme = "auto"
   ShowReadingTime = true
@@ -40,6 +44,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   ShowToc = true
+  comments = true
   description = "Neuroscientist by training. Now working on gene therapy with RNA editing."
 
   [params.homeInfoParams]
