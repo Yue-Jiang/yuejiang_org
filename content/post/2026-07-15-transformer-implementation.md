@@ -7,9 +7,9 @@ categories: []
 tags: ["deep learning"]
 ---
 
-I tried to use Claude Code for self study. Starting here with a 10-ish day [tutorial](https://github.com/Yue-Jiang/transformer-tutorial) on implementation of the GPT-style transformer model. This was an enjoyable experience - after a few days I got to implement embedding, layernorm, multi-head attention cross entropy and put them together into a decoder only transformer that trains. Beyond learning about transformer implementation, I realized that I could self study other subjects this way too - it will likely be more pleasant and motivating - feels a bit like Duolingo. I wish I had coding agents like this back in college and grad school (Maybe now is the time to revisit that measure theory class I struggled most! or not). The tutorial itself may not be very useful for other people beyond myself, although a couple observations may generalize. When using Claude for self study, I find it helpful to 1) talk with it, be explicit about my understanding, assumptions and confusions 2) have it break the learning down to bite size 3) use a plain text editor for assignments - even VS Code Copilot autocompletion implements transformers better than me.
+I tried to use Claude Code for self study. Starting here with a 10-ish day [tutorial](https://github.com/Yue-Jiang/transformer-tutorial) on implementation of the GPT-style transformer model. This was an enjoyable experience - after a few days I got to implement embedding, layernorm, multi-head attention, cross entropy and put them together into a decoder-only transformer that actually trains on my laptop. Beyond learning about transformer implementation, I realized that I could self study other subjects this way too - it will likely be more pleasant and motivating - feels a bit like Duolingo. I wish I had coding agents like this back in college and grad school (Maybe now is the time to revisit that measure theory class I struggled with most! or not). The tutorial itself may not be very useful for other people, although a couple observations may generalize. When using Claude for self study, I find it helpful to 1) talk with it, be explicit about my understanding, assumptions and confusions 2) have it break the learning down to bite size 3) use a plain text editor for assignments - even VS Code Copilot autocompletion implements transformers better than me.
 
-The main reason for writing this post is actually to make note of something else. Without prompting, Claude also generated a short corpus for testing the training step, which I actually quite like:
+The main reason for writing this post is actually to make note of something else. Without prompting, Claude also generated a short corpus for testing the training step, which I quite like:
 
 > the little robot woke at dawn and checked its battery. the battery was full, and the day was new. the little robot rolled to the window and watched the sun climb over the hills. every morning the robot made the same plan: water the garden, count the clouds, and write one line in its journal.
 >
@@ -33,6 +33,8 @@ Later I asked about it and to my surprise, it provided thorough reasoning about 
 
 ![Claude explaining how and why it wrote the training corpus](/img/transformer-comment.png)
 
-And on the last day, it said 
+And on the last day, after I completed the tutorial, it said: 
 
 ![Claude's day-10 "course complete" sign-off](/img/transformer-complete.png)
+
+Now I think I'll remember that 🤖🍅 for a number of years.
